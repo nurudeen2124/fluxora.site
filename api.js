@@ -1,4 +1,4 @@
-const BASE = import.meta.env?.VITE_API_BASE?.trim() || 'http://localhost:3001/api'
+const BASE = import.meta.env?.VITE_API_BASE?.trim() || '/api'
 
 /** Public access key from web3forms.com (register with nbt2124@gmail.com). Sends mail without server SMTP. */
 const WEB3FORMS_KEY = import.meta.env?.VITE_WEB3FORMS_ACCESS_KEY?.trim()

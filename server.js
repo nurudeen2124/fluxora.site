@@ -2,9 +2,13 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import nodemailer from 'nodemailer'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 const app = express()
-const PORT = 3001
+const PORT = Number(process.env.PORT || 3001)
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 /** Inbound address for contact form notifications (override with CONTACT_TO). */
 const CONTACT_TO = (process.env.CONTACT_TO || 'nbt2124@gmail.com').toLowerCase()
@@ -193,6 +197,13 @@ app.post('/api/subscribe', (req, res) => {
 // Get all contacts (admin)
 app.get('/api/admin/contacts', (req, res) => {
   res.json({ contacts, total: contacts.length })
+})
+
+// Serve frontend assets from this same service (Render root URL)
+app.use(express.static(__dirname))
+app.use('/public', express.static(path.join(__dirname, 'public')))
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'))
 })
 
 app.listen(PORT, () => {
