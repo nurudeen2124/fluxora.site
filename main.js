@@ -175,7 +175,7 @@ document.querySelector('#app').innerHTML = `
     </div>
     <div class="team-grid">
       ${[
-        ['Tibil Nurudeen Bore','CEO & Founder','/ceo-profile.png','A young and driven technology professional with over three years of experience in web development, AI systems, and automation. He began programming at age 14 and is currently 18, studying at university while leading FLUXORA.'],
+        ['Nurudeen Boare Tibil','CEO & Founder','/ceo-profile.png','A young and driven technology professional with over three years of experience in web development, AI systems, and automation. He began programming at age 14 and is currently 18, studying at university while leading FLUXORA.'],
       ].map(([n,r,img,b]) => `
         <div class="member reveal">
           <img class="avatar-photo" src="${img}" alt="${n} profile photo" />
