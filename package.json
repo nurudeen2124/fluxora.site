@@ -1,10 +1,11 @@
 {
-  "name": "fluxora",
+  "name": "veltrixa-labs",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "concurrently \"node server.js\" \"vite --port 5173\"",
+    "start": "node server.js",
     "server": "node server.js",
     "client": "vite",
     "build": "vite build",
