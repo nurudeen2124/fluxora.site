@@ -11,7 +11,7 @@ const services = [
 // ── Render ────────────────────────────────────────────────
 document.querySelector('#app').innerHTML = `
 <nav class="nav" id="nav">
-  <a class="logo" href="#">Veltrixa <em>Labs</em></a>
+  <a class="logo" href="#">Kaelora <em>Labs</em></a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -45,7 +45,7 @@ document.querySelector('#app').innerHTML = `
     </div>
     <h1>We build technology<br><em>that feels human.</em></h1>
     <p class="hero-sub">
-      Veltrixa Labs crafts intelligent software — powerful enough to transform industries, thoughtful enough to feel like second nature.
+      Kaelora Labs crafts intelligent software — powerful enough to transform industries, thoughtful enough to feel like second nature.
     </p>
     <div class="hero-actions">
       <a href="#services" class="btn btn-primary">See what we build</a>
@@ -107,7 +107,7 @@ document.querySelector('#app').innerHTML = `
       <span class="label">// Who we are</span>
       <h2>Built by people,<br><em>for people.</em></h2>
       <p class="body-text">
-        We started Veltrixa Labs because we believed AI was becoming cold — all power, no warmth. So we built a company where engineers care as much about experience as they do about performance.
+        We started Kaelora Labs because we believed AI was becoming cold — all power, no warmth. So we built a company where engineers care as much about experience as they do about performance.
       </p>
       <p class="body-text mt">
         Every product we ship is designed to disappear into your workflow — quietly doing the hard work so you can focus on what matters most.
@@ -171,11 +171,11 @@ document.querySelector('#app').innerHTML = `
     <div class="section-header reveal" style="text-align:center">
       <span class="label">// Leadership</span>
       <h2>Founder-led,<br>execution-focused.</h2>
-      <p class="body-text" style="max-width:520px;margin:0 auto">Veltrixa Labs is led by a hands-on founder focused on delivering practical AI, web, and automation solutions for modern businesses.</p>
+      <p class="body-text" style="max-width:520px;margin:0 auto">Kaelora Labs is led by a hands-on founder focused on delivering practical AI, web, and automation solutions for modern businesses.</p>
     </div>
     <div class="team-grid">
       ${[
-        ['Tibil Nurudeen Bore','CEO & Founder','/ceo-profile.png','A young and driven technology professional with over three years of experience in web development, AI systems, and automation. He began programming at age 14 and is currently 18, studying at university while leading Veltrixa Labs.'],
+        ['Tibil Nurudeen Bore','CEO & Founder','/ceo-profile.png','A young and driven technology professional with over three years of experience in web development, AI systems, and automation. He began programming at age 14 and is currently 18, studying at university while leading Kaelora Labs.'],
       ].map(([n,r,img,b]) => `
         <div class="member reveal">
           <img class="avatar-photo" src="${img}" alt="${n} profile photo" />
@@ -271,7 +271,7 @@ document.querySelector('#app').innerHTML = `
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <span class="logo">Veltrixa <em>Labs</em></span>
+      <span class="logo">Kaelora <em>Labs</em></span>
       <p>Intelligent software, built with care.</p>
     </div>
     <nav class="footer-nav">
@@ -280,7 +280,7 @@ document.querySelector('#app').innerHTML = `
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
     </nav>
-    <p class="footer-copy">© 2024 Veltrixa Labs · Accra, Ghana · All rights reserved.</p>
+    <p class="footer-copy">© 2024 Kaelora Labs · Accra, Ghana · All rights reserved.</p>
   </div>
 </footer>
 
@@ -309,13 +309,13 @@ mobileMenu.querySelectorAll('a').forEach(a => {
 
 // ── Theme toggle ──────────────────────────────────────────
 const themeToggle = document.getElementById('theme-toggle')
-const savedTheme = localStorage.getItem('veltrixa-theme') || 'dark'
+const savedTheme = localStorage.getItem('kaelora-theme') || 'dark'
 document.documentElement.setAttribute('data-theme', savedTheme)
 themeToggle.textContent = savedTheme === 'light' ? 'Dark' : 'Light'
 themeToggle.addEventListener('click', () => {
   const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
   document.documentElement.setAttribute('data-theme', next)
-  localStorage.setItem('veltrixa-theme', next)
+  localStorage.setItem('kaelora-theme', next)
   themeToggle.textContent = next === 'light' ? 'Dark' : 'Light'
 })
 
